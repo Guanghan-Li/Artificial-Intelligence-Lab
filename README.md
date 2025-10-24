@@ -17,7 +17,7 @@ This repository hosts my programming coursework for CSEN 166, _Artificial Intell
 ### Lab 3 — Multi-Agent Pacman
 - Implemented a depth-limited minimax agent in `multiAgents.py` that cycles through Pacman and every ghost while propagating max/min values across the game tree.
 - Began exploring alpha-beta pruning, expectimax, and an improved evaluation heuristic; the scaffolding is in place with TODO markers for continued development.
-- Included the assignment brief (`CSEN 166 Lab3 .pdf`) alongside the project code to document requirements and testing notes.
+- Tracking remaining tasks in-line with the project files so requirements and testing guidance stay close to the code.
 
 ## Repository Notes
 - Projects retain the Berkeley licensing headers; all changes here are strictly for CSEN 166 coursework and personal study.
