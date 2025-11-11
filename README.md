@@ -1,6 +1,6 @@
-# CSEN 166 – Artificial Intelligence Labs
+# Artificial Intelligence
 
-This repository hosts my programming coursework for CSEN 166, _Artificial Intelligence_. Each lab builds on the UC Berkeley Pacman projects and related Python exercises to practice fundamental AI search and decision-making techniques.
+This repository hosts my programming coursework for Artificial Intelligence. Each lab builds on the UC Berkeley Pacman projects and related Python exercises to practice fundamental AI search and decision-making techniques.
 
 ## Lab Summaries
 
