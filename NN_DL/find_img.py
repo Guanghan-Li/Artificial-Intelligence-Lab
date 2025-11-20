@@ -1,22 +1,25 @@
 import numpy as np
 import tensorflow as tf
-
-(train_images, train_labels), (test_images, test_labels) = tf.keras.datasets.fashion_mnist.load_data()
 import matplotlib.pyplot as plt
 
-class_names = ['T-shirt/top', 'Trouser', 'Pullover', 'Dress', 'Coat',
-               'Sandal', 'Shirt', 'Sneaker', 'Bag', 'Ankle boot']
+CLASS_NAMES = [
+    "T-shirt/top", "Trouser", "Pullover", "Dress", "Coat",
+    "Sandal", "Shirt", "Sneaker", "Bag", "Ankle boot",
+]
 
-chosen_indices = []
-for cls in range(10):
-    idx = np.where(train_labels == cls)[0][0]
-    chosen_indices.append(idx)
+# Load data once
+(train_images, train_labels), _ = tf.keras.datasets.fashion_mnist.load_data()
+
+# Pick the first occurrence of each class
+first_idx_per_class = [np.where(train_labels == cls)[0][0] for cls in range(10)]
+sample_images = train_images[first_idx_per_class]
 
 plt.figure(figsize=(10, 2))
-for i, idx in enumerate(chosen_indices):
-    plt.subplot(1, 10, i+1)
-    plt.imshow(train_images[idx].reshape(28, 28), cmap="gray")
-    plt.title(class_names[i])
-    plt.axis('off')
+for i, (name, img) in enumerate(zip(CLASS_NAMES, sample_images), start=1):
+    plt.subplot(1, 10, i)
+    plt.imshow(img, cmap="gray")
+    plt.title(name)
+    plt.axis("off")
+
 plt.tight_layout()
 plt.show()
